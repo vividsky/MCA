@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="stack_linkedList_infix_postfix">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/myADT/stack_linkedList_infix_postfix.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
