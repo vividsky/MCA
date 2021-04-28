@@ -1,4 +1,4 @@
-package ADT;
+//package ADT;
 //new()
 //push()
 //pop()
@@ -6,50 +6,42 @@ package ADT;
 //size()
 //isEmpty()
 
-public class GrowableStack<obj> {
+public class GrowableStack<E> {
     static int size, top, bound;
-    obj[] stack;
+    E[] stack;
 
     public GrowableStack() {
-        stack = new [0];
         size = 0;
         top = -1;
         bound = 4;
-    }
-
-    private static obj[] newArr(int size) {
-        String[] new_stack = new String[size + bound];
-        return new_stack;
     }
 
     public boolean isEmpty() {return top == -1;}
 
     public int size() {return top + 1;}
 
-    public String top() {
+    public Object top() {
         if (isEmpty()) {
             return "Stack is Empty!";
         }
         return stack[top];
     }
 
-    public String pop() {
+    public E pop() {
         if (isEmpty()) System.out.println("Stack is Empty!");
-        String value = stack[top];
-        top--;
-        return value;
+        return stack[top--];
     }
 
-    public void push(String ele) {
+    public void push(Object ele) {
         if (top == size - 1) {
-            String[] arr = newArr(size);
+            E[] new_stack = (E[]) new Object[size + bound];
             for (int i = 0; i < size; i++) {
-                arr[i] = stack[i];
+                new_stack[i] = stack[i];
             }
-            arr[top+1] = ele;
-            stack = arr;
+            stack = new_stack;
             size+=bound;
-        } else stack[top + 1] = ele;
+        }
+        stack[top + 1] = (E) ele;
         top++;
     }
 }

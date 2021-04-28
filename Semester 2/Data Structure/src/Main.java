@@ -12,7 +12,7 @@ public class Main {
 //        arr.delAtFront();
 //        arr.delAtRear();
 //        arr.display();
-        GrowableStack arrList = new GrowableStack();
+        GrowableStack<String> arrList = new GrowableStack<String>();
         arrList.push("Nidhi");
         System.out.println(arrList.isEmpty());
         System.out.println(arrList.size());
