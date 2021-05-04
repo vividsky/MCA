@@ -1,4 +1,4 @@
-//package ADT;
+package ADT;
 //new()
 //push()
 //pop()

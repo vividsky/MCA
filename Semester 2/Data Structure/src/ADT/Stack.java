@@ -1,23 +1,23 @@
 package ADT;
 
-public class Stack {
+public class Stack<E> {
     LinkedList stack = new LinkedList();
 
     public Boolean isEmpty() {return stack.size ==0;}
 
     public int length() {return stack.size;}
 
-    public String peek() {
-        if (isEmpty()) {return "Stack is Empty!!";}
-        return stack.peekEle();
+    public E peek() throws Exception {
+        if (isEmpty()) throw new Exception("List is Empty!!");
+        return (E) stack.peekEle();
     }
 
-    public void push(String _d) {
+    public void push(Object _d) {
         stack.insertAtFront(_d);
     }
 
-    public String pop() {
-        if (isEmpty()) {return "Stack is Empty!!";}
-        return stack.delAtFront();
+    public E pop() throws Exception {
+        if (isEmpty()) throw new Exception("List is Empty!!");
+        return (E) stack.delAtFront();
     }
 }
